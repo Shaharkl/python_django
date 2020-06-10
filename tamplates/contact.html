@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>contact</h1>
+<p>shahar-0544351330<p/>
+<p>
+{{my_text}},{{my_number}}
+</p>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+<ul>
+{% for my_sub_item in my_list %}
+    {% if my_sub_item == 3 %}
+         <li>{{my_sub_item|add:"6"}}</li>
+    {% else %}
+         <li>{{my_sub_item}}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+{% endblock %}
